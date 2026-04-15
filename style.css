@@ -1,0 +1,29 @@
+:root {
+    --primary: #00dfd8;
+    --secondary: #007cf0;
+    --accent: #7928ca;
+    --glass: rgba(255, 255, 255, 0.03);
+    --border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    margin: 0; padding: 0; background: #000 url('https://images.unsplash.com/photo-1654649451086-dd75d8170a27?w=1600&q=80') no-repeat center center fixed;
+    background-size: cover; color: #fff; font-family: 'Segoe UI', sans-serif; overflow-x: hidden;
+}
+
+.overlay-vignette {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.9) 100%);
+    z-index: 1; pointer-events: none;
+}
+
+.glass-card {
+    background: var(--glass); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+    border: 1px solid var(--border); border-radius: 20px; padding: 30px; transition: 0.4s;
+}
+
+.hero-title {
+    font-size: clamp(40px, 10vw, 100px); font-weight: 900;
+    background: linear-gradient(to bottom, #fff, var(--primary));
+    -webkit-background-clip: text; color: transparent; text-transform: uppercase;
+}
